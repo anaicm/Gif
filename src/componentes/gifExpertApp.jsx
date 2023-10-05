@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { AddCategory } from "./input";//importar el componente input
-import { GrifGrid } from "./girGrid";
+import { AddCategory, GrifGrid } from "./";//cuando el nombre es index no hace falta ponerlo
 
 export function GifExpertApp() {
 
- const [categories, setCategories]=useState(['One Punch', 'Dragron Boll']);
+ const [categories, setCategories]=useState(['']);
  
  const onAddCategory=(newValueCategory)=>{
+  
     if(categories.includes(newValueCategory))
     return; 
 
-    setCategories([...categories, newValueCategory])
+    setCategories([ newValueCategory,...categories])
 }
    return (
       <>
